@@ -24,11 +24,12 @@ const server = new ApolloServer ({
         try {
             authToken = req.headers.authorization;
             if (authToken) {
-                const currentUser = await findOrCreateUser(authToken);
+                currentUser = await findOrCreateUser(authToken);
             }
         } catch (err) {
             console.error(`Unable to authenticate with data ${authToken}`)
         }
+        console.log({ currentUser });
         return { currentUser };
     }
 })

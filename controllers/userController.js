@@ -7,7 +7,7 @@ const client = new OAuth2Client(process.env.OAUTH_CLIENT_ID);
 
 exports.findOrCreateUser = async token => {
     // verify User
-    const googleUser = await verifyUser(token);
+    const googleUser = await verifyAuthToken(token);
     // check existing User
     const user = await checkIfUserExists(googleUser.email);
     // create New User
@@ -15,7 +15,7 @@ exports.findOrCreateUser = async token => {
 }
 
 
-const verifyUser = async token => {
+const verifyAuthToken = async token => {
     try {
         const ticket = await client.verifyIdToken({
             idToken: token,
