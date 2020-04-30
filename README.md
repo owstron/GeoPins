@@ -5,6 +5,9 @@ A web application that allows users pin their favorite location with images and 
 This project is available at [https://github.com/nik1997/GeoPins](https://github.com/nik1997/GeoPins)
 
 ## Instructions
+We use `Cloudinary` for storing pictures, `Mongo DB Atlas` for database and `Google OAUTH 2.0` for authentication. So, before starting, get credentials from these services and update teh `.env` file and `./client/src/settings.js` files, accordingly.
+
+
 Install all the dependencies for the project using 
 ```
 > yarn install
