@@ -22,7 +22,7 @@ const Signout = ({ classes }) => {
         <span className={classes.root} onClick={onClick}>
           <Typography
             variant='body1'
-            className='buttonText'
+            className={classes.buttonText}
           >
             Signout
           </Typography>
@@ -39,11 +39,11 @@ const styles = {
     display: "flex"
   },
   buttonText: {
-    color: "orange"
+    color: "white"
   },
   buttonIcon: {
     marginLeft: "5px",
-    color: "orange"
+    color: "white"
   }
 };
 

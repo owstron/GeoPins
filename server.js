@@ -29,7 +29,6 @@ const server = new ApolloServer ({
         } catch (err) {
             console.error(`Unable to authenticate with data ${authToken}`)
         }
-        console.log({ currentUser });
         return { currentUser };
     }
 })

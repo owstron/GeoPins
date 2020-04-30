@@ -13,7 +13,7 @@ const Header = ({ classes }) => {
   const { currentUser } = state;
   return (
     <div className={classes.root}>
-      <AppBar position='static'>
+      <AppBar position='static' className={classes.appBar}>
         <Toolbar>
           {/* Title/Logo */}
           <div className={classes.grow}>
@@ -55,7 +55,10 @@ const Header = ({ classes }) => {
 
 const styles = theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+  },
+  appBar: {
+    backgroundColor: 'dodgerblue'
   },
   grow: {
     flexGrow: 1,
@@ -64,7 +67,6 @@ const styles = theme => ({
   },
   icon: {
     marginRight: theme.spacing.unit,
-    color: 'green',
     fontSize: 45
   },
   mobile: {
